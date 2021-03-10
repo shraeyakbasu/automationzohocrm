@@ -26,7 +26,7 @@ public class Basetest implements Autoconstant
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(url);
+		driver.get(url1);
 		driver.manage().window().maximize();
 		
 	}

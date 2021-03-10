@@ -3,14 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.scripts.mavencrm.loginlogout">
+      <class name="com.scripts.mavencrm.createcampaign">
         <methods>
-          <include name="loginandlogout"/>
+          <include name="newcampaign"/>
+          <include name="logout"/>
           <include name="closebrowser"/>
           <include name="openbrowser"/>
           <include name="login"/>
         </methods>
-      </class> <!-- com.scripts.mavencrm.loginlogout -->
+      </class> <!-- com.scripts.mavencrm.createcampaign -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,9 +1,16 @@
 package com.generics.mavencrm;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.Set;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Basepage 
@@ -44,12 +51,12 @@ public class Basepage
 	
 	public void geturl(WebDriver driver)
 	{
-		driver.getCurrentUrl();
+		System.out.println(driver.getCurrentUrl());
 	}
 	
 	public void gettitle(WebDriver driver)
 	{
-		driver.getTitle();
+		System.out.println(driver.getTitle());
 	}
 	
 	public void javascriptexecuterclick(WebElement element,WebDriver driver)
@@ -59,7 +66,35 @@ public class Basepage
 		
 	}
 	
+	public void openinnewtab(WebDriver driver,WebElement element) throws AWTException
 	
+	{
+		Actions act=new Actions(driver);
+		act.contextClick(element).perform();
+		Robot r= new Robot();
+		r.keyPress(KeyEvent.VK_RIGHT);
+		r.keyPress(KeyEvent.VK_ENTER);
+		Set<String> windowhandles=driver.getWindowHandles();
+		ArrayList<String> al=new ArrayList<String>(windowhandles);
+		driver.switchTo().window(al.get(0));
+		
+			
+	}
+	
+	public void openinnewwindow(WebDriver driver,WebElement element) throws AWTException
+	
+	{
+		Actions act=new Actions(driver);
+		act.contextClick(element).perform();
+		Robot r= new Robot();
+		r.keyPress(KeyEvent.VK_RIGHT);
+		r.keyPress(KeyEvent.VK_PAGE_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		Set<String> windowhandles=driver.getWindowHandles();
+		ArrayList<String> al=new ArrayList<String>(windowhandles);
+		driver.switchTo().window(al.get(0));
+		
+	}
 	
 	
 	
