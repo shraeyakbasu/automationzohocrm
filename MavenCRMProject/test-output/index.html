@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.scripts.mavencrm.editcampaign" class="method navigator-link" hash-for-method="editcampaigns">editcampaigns</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.scripts.mavencrm.loginlogout" class="method navigator-link" hash-for-method="loginandlogout">loginandlogout</a> <!-- method navigator-link -->
@@ -125,6 +130,23 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.scripts.mavencrm.editcampaign</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="editcampaigns">
+                  </a> <!-- editcampaigns -->
+                  <span class="method-name">editcampaigns</span>
+                  <em>
+(integration testing between create campaign and edit campaign page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.scripts.mavencrm.loginlogout</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -133,6 +155,8 @@
                   <a name="loginandlogout">
                   </a> <!-- loginandlogout -->
                   <span class="method-name">loginandlogout</span>
+                  <em>
+(checking login,logout feature)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -168,6 +192,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.scripts.mavencrm.loginlogout&quot;/&gt;
       &lt;class name=&quot;com.scripts.mavencrm.createcampaign&quot;/&gt;
+      &lt;class name=&quot;com.scripts.mavencrm.editcampaign&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -181,7 +206,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,20 +232,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'newcampaign')
-data.setCell(0, 2, 'com.scripts.mavencrm.createcampaign')
-data.setCell(0, 3, 15135);
+data.setCell(0, 1, 'editcampaigns')
+data.setCell(0, 2, 'com.scripts.mavencrm.editcampaign')
+data.setCell(0, 3, 21920);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginandlogout')
-data.setCell(1, 2, 'com.scripts.mavencrm.loginlogout')
-data.setCell(1, 3, 78);
+data.setCell(1, 1, 'newcampaign')
+data.setCell(1, 2, 'com.scripts.mavencrm.createcampaign')
+data.setCell(1, 3, 20913);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginandlogout')
+data.setCell(2, 2, 'com.scripts.mavencrm.loginlogout')
+data.setCell(2, 3, 25);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -253,42 +282,65 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">login</span>
-                <span class="method-start">14744 ms</span>
+                <span class="method-start">34334 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginandlogout</span>
-                <span class="method-start">35982 ms</span>
+                <span class="method-start">71568 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logout</span>
-                <span class="method-start">36067 ms</span>
+                <span class="method-start">71596 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closebrowser</span>
-                <span class="method-start">38076 ms</span>
+                <span class="method-start">73092 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.scripts.mavencrm.createcampaign</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">openbrowser</span>
-                <span class="method-start">39631 ms</span>
+                <span class="method-start">77085 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">login</span>
-                <span class="method-start">54428 ms</span>
+                <span class="method-start">114534 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">newcampaign</span>
-                <span class="method-start">61692 ms</span>
+                <span class="method-start">121234 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logout</span>
-                <span class="method-start">76829 ms</span>
+                <span class="method-start">142148 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closebrowser</span>
-                <span class="method-start">78534 ms</span>
+                <span class="method-start">142386 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.scripts.mavencrm.editcampaign</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">openbrowser</span>
+                <span class="method-start">145729 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">164491 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">editcampaigns</span>
+                <span class="method-start">176083 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logout</span>
+                <span class="method-start">198008 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">closebrowser</span>
+                <span class="method-start">198431 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

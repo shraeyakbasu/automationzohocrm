@@ -22,11 +22,11 @@ public class Basetest implements Autoconstant
 	@BeforeClass
 	public void openbrowser()
 	{
-		
+		System.setProperty("webdriver.chrome.logfile", logpath);
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(url1);
+		driver.get(url);
 		driver.manage().window().maximize();
 		
 	}

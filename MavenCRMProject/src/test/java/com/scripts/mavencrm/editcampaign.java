@@ -5,15 +5,16 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import com.generics.mavencrm.Basetest;
+import com.pages.mavencrm.zohocrmcampaigndetailspage;
 import com.pages.mavencrm.zohocrmcampaignlistpage;
 import com.pages.mavencrm.zohocrmcreatecampaignpage;
 import com.pages.mavencrm.zohocrmhomepage;
 
-public class createcampaign extends Basetest
-{
+public class editcampaign extends Basetest
 
-	@Test(description="integration test case between create campaign and campaign list page ")
-	public void newcampaign() throws IOException
+{
+	@Test(description="integration testing between create campaign and edit campaign page")
+	public void editcampaigns() throws IOException
 	{
 		zohocrmhomepage zchp=new zohocrmhomepage(driver);
 		zchp.campaign();
@@ -23,6 +24,11 @@ public class createcampaign extends Basetest
 		zccmp.createcampaign();
 		zchp.campaign();
 		zcclp.campaigndetails();
-	
+		zcclp.campaignselect();
+		zohocrmcampaigndetailspage zcdp=new zohocrmcampaigndetailspage(driver);
+		zcdp.edit();
+		
+		
 	}
+
 }

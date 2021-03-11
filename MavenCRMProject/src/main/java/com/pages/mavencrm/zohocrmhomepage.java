@@ -1,9 +1,12 @@
 package com.pages.mavencrm;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.generics.mavencrm.Autoconstant;
 import com.generics.mavencrm.Basepage;
@@ -86,8 +89,14 @@ public class zohocrmhomepage extends Basepage implements Autoconstant
 	public void campaign()
 	{
 		campaignslink.click();
-		gettitle(driver);
+		String actualtitle=gettitle(driver);
+		String expectedtitlle="Zoho CRM - Displaying Custom View Details";
+		Assert.assertEquals(actualtitle, expectedtitlle);
+		System.out.println("matched");	
+		
 	}
+	
+	
 	
 	public void product()
 	{

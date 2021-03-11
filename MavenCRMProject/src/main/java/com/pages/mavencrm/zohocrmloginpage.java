@@ -54,7 +54,7 @@ public class zohocrmloginpage extends Basepage implements Autoconstant
 	
 	public void forgotpassword()
 	{
-		forgotpasswordlink.clear();
+		forgotpasswordlink.click();
 	}
 	
 	public void newuserregistration()

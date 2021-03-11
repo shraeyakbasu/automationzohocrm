@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.generics.mavencrm.Autoconstant;
 import com.generics.mavencrm.Basepage;
@@ -65,6 +66,10 @@ public class zohocrmcreatecampaignpage extends Basepage implements Autoconstant
 	
 	public void createcampaign() throws IOException
 	{
+		String actualtitle=gettitle(driver);
+	    String expectedtitle="Zoho CRM - Create Campaign";
+	    Assert.assertEquals(actualtitle, expectedtitle);
+	    System.out.println("matched");
 		campaignnametextfield.sendKeys(Excellibrary.Getstringcellvalue(excelpath, campaigndetails, 1, 0));
 	    startdatetextfield.sendKeys(Excellibrary.Getstringcellvalue(excelpath, campaigndetails, 1, 1));
 	    expectedrevenuetextfield.sendKeys(Excellibrary.Getstringcellvalue(excelpath, campaigndetails, 1, 2));
@@ -76,7 +81,7 @@ public class zohocrmcreatecampaignpage extends Basepage implements Autoconstant
 	    selectbyvalue(typedropdown, "Trade Show");
 	    selectbyvalue(statusdropdown, "Planning");
 	    savebutton.click();
-	    gettitle(driver);
+	    
 	
 	
 	

@@ -8,4 +8,5 @@ public interface Autoconstant
 	String excelpath="./testdata/zohocrmexcelsheet.xlsx";
 	String logindetails="login";
 	String campaigndetails="createcampaign";
+	String logpath="./log/crmlog.txt";
 }

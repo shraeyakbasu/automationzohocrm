@@ -49,14 +49,14 @@ public class Basepage
 		alt.dismiss();
 	}
 	
-	public void geturl(WebDriver driver)
+	public String geturl(WebDriver driver)
 	{
-		System.out.println(driver.getCurrentUrl());
+		return driver.getCurrentUrl();
 	}
 	
-	public void gettitle(WebDriver driver)
+	public String gettitle(WebDriver driver)
 	{
-		System.out.println(driver.getTitle());
+		return driver.getTitle();
 	}
 	
 	public void javascriptexecuterclick(WebElement element,WebDriver driver)
@@ -95,6 +95,8 @@ public class Basepage
 		driver.switchTo().window(al.get(0));
 		
 	}
+	
+	
 	
 	
 	

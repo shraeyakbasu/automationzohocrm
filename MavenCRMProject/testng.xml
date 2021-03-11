@@ -3,8 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.scripts.mavencrm.loginlogout"/>
-      <class name="com.scripts.mavencrm.createcampaign"/>
+    <class name="com.scripts.mavencrm.loginlogout"/>
+    <class name="com.scripts.mavencrm.createcampaign"/>
+      <class name="com.scripts.mavencrm.editcampaign"/>
+      
       
     </classes>
   </test> <!-- Test -->
