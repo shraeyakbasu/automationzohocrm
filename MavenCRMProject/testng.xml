@@ -3,11 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    <class name="com.scripts.mavencrm.loginlogout"/>
-    <class name="com.scripts.mavencrm.createcampaign"/>
       <class name="com.scripts.mavencrm.editcampaign"/>
-      
-      
+      <class name="com.scripts.mavencrm.createcampaign"/>
+      <class name="com.scripts.mavencrm.createlead"/>
+      <class name="com.scripts.mavencrm.campaignpotentialintegration"/>
+      <class name="com.scripts.mavencrm.clonelead"/>
+      <class name="com.scripts.mavencrm.loginlogout"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
