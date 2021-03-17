@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
+      <class name="com.scripts.mavencrm.clonelead">
+        <methods>
+          <include name="logout"/>
+          <include name="closebrowser"/>
+          <include name="openbrowser"/>
+          <include name="login"/>
+          <include name="leadclone"/>
+        </methods>
+      </class> <!-- com.scripts.mavencrm.clonelead -->
+      <class name="com.scripts.mavencrm.createlead">
+        <methods>
+          <include name="logout"/>
+          <include name="closebrowser"/>
+          <include name="createnewlead"/>
+          <include name="openbrowser"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.scripts.mavencrm.createlead -->
       <class name="com.scripts.mavencrm.editcampaign">
         <methods>
           <include name="editcampaigns"/>
@@ -12,6 +30,42 @@
           <include name="login"/>
         </methods>
       </class> <!-- com.scripts.mavencrm.editcampaign -->
+      <class name="com.scripts.mavencrm.loginlogout">
+        <methods>
+          <include name="loginandlogout"/>
+          <include name="logout"/>
+          <include name="closebrowser"/>
+          <include name="openbrowser"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.scripts.mavencrm.loginlogout -->
+      <class name="com.scripts.mavencrm.createcampaign">
+        <methods>
+          <include name="newcampaign"/>
+          <include name="logout"/>
+          <include name="closebrowser"/>
+          <include name="openbrowser"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.scripts.mavencrm.createcampaign -->
+      <class name="com.scripts.mavencrm.campaignpotentialintegration">
+        <methods>
+          <include name="logout"/>
+          <include name="campaignpotential"/>
+          <include name="closebrowser"/>
+          <include name="openbrowser"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.scripts.mavencrm.campaignpotentialintegration -->
+      <class name="com.scripts.mavencrm.editlead">
+        <methods>
+          <include name="leadedit"/>
+          <include name="logout"/>
+          <include name="closebrowser"/>
+          <include name="openbrowser"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.scripts.mavencrm.editlead -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

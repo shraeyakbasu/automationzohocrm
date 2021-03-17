@@ -42,6 +42,8 @@ public class zohocrmleaddetailspage extends Basepage implements Autoconstant
 	public void leadedit()
 	{
 		editbutton.click();
+		String actualtitle=gettitle(driver);
+		Reporter.log(actualtitle,true);
 	}
 	
 	public void leaddelete()

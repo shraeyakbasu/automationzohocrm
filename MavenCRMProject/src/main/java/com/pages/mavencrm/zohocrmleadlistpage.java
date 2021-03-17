@@ -40,7 +40,7 @@ public class zohocrmleadlistpage extends Basepage implements Autoconstant
 	
 	public void leadlistdetails()
 	{
-		List<WebElement> elements=driver.findElements(By.xpath("//td[@class='tableData']/a"));
+		java.util.List<WebElement> elements=driver.findElements(By.xpath("//td[@class='tableData']/a"));
 		for(int i=0;i<elements.size();i++)
 		{
 			if(elements.get(i).getText().contains("shraeyak basu"))

@@ -7,18 +7,18 @@ import org.testng.annotations.Test;
 
 import com.generics.mavencrm.Basetest;
 import com.generics.mavencrm.Utility;
-import com.pages.mavencrm.zohocrmcloneleadpage;
 import com.pages.mavencrm.zohocrmcreateleadpage;
+import com.pages.mavencrm.zohocrmeditleadpage;
 import com.pages.mavencrm.zohocrmhomepage;
 import com.pages.mavencrm.zohocrmleaddetailspage;
 import com.pages.mavencrm.zohocrmleadlistpage;
 
 @Listeners(Utility.class)
-public class clonelead extends Basetest
-
+public class editlead extends Basetest
 {
-	@Test(description = "integration testing between create lead page and clone lead page")
-	public void leadclone() throws IOException, InterruptedException
+
+	@Test(description = "integration between create lead page and edit lead page")
+	public void leadedit() throws IOException, InterruptedException
 	{
 		zohocrmhomepage zchp=new zohocrmhomepage(driver);
 		zchp.leads();
@@ -29,9 +29,9 @@ public class clonelead extends Basetest
 		zchp.leads();
 		zcllp.leadselect();
 		zohocrmleaddetailspage zclddp=new zohocrmleaddetailspage(driver);
-		zclddp.leadclone();
-		zohocrmcloneleadpage zccldp= new zohocrmcloneleadpage(driver);
-		zccldp.leadmatching();
+		zclddp.leadedit();
+		zohocrmeditleadpage zceldp=new zohocrmeditleadpage(driver);
+		zceldp.checkelement();
+		
 	}
-
 }

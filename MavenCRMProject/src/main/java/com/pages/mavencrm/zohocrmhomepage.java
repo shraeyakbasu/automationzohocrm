@@ -76,13 +76,15 @@ public class zohocrmhomepage extends Basepage implements Autoconstant
 	public void accounts()
 	{
 		accountslink.click();
-		gettitle(driver);
+		String actualtitle=gettitle(driver);
+		Reporter.log(actualtitle,true);
 	}
 	
 	public void contact()
 	{
 		contactslink.click();
-		gettitle(driver);
+		String actualtitle=gettitle(driver);
+		Reporter.log(actualtitle,true);
 	}
 	
 	public void potential()

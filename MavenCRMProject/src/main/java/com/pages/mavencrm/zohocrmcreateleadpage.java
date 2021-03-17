@@ -1,6 +1,9 @@
 package com.pages.mavencrm;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -103,8 +106,18 @@ public class zohocrmcreateleadpage extends Basepage implements Autoconstant
 		WebElement element=null;
 		campaignsourcelookupicon.click();
 		Thread.sleep(3000);
-		element=driver.findElement(By.xpath("//a[contains(text(),'samsung mobile')]"));
-		javascriptexecuterclick(element, driver);
+		Set<String> windowhandles=driver.getWindowHandles();
+		ArrayList<String> al=new ArrayList<String>(windowhandles);
+		driver.switchTo().window(al.get(1));
+		List<WebElement> elements=driver.findElements(By.xpath("//td[@class='tableData']/a"));
+		for(int i=0;i<elements.size();i++)
+		{
+			if(elements.get(i).getText().contains("samsung mobile"))
+				element=elements.get(i);
+			element.click();
+			break;
+		}
+		driver.switchTo().window(al.get(0));
 		
 	}
 	
@@ -130,7 +143,7 @@ public class zohocrmcreateleadpage extends Basepage implements Autoconstant
 		selectbyvalue(industrydropdown, "Large Enterprise");
 		selectbyvalue(leadstatusdropdown, "Contacted");
 		selectbyvalue(ratingdropdown, "Active");
-		//campaignsourcelookupclick();
+		campaignsourcelookupclick();
 		savebutton.click();
 		
 		

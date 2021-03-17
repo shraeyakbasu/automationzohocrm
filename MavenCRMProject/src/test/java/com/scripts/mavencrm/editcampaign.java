@@ -2,14 +2,18 @@ package com.scripts.mavencrm;
 
 import java.io.IOException;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.generics.mavencrm.Basetest;
+import com.generics.mavencrm.Utility;
 import com.pages.mavencrm.zohocrmcampaigndetailspage;
 import com.pages.mavencrm.zohocrmcampaignlistpage;
 import com.pages.mavencrm.zohocrmcreatecampaignpage;
 import com.pages.mavencrm.zohocrmhomepage;
 
+
+@Listeners(Utility.class)
 public class editcampaign extends Basetest
 
 {

@@ -9,5 +9,6 @@ public interface Autoconstant
 	String logindetails="login";
 	String campaigndetails="createcampaign";
 	String leaddetails="createlead";
+	String accountdetails="createaccount";
 	String logpath="./log/crmlog.txt";
 }

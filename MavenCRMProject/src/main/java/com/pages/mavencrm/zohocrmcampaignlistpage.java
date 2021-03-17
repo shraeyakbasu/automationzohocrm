@@ -52,12 +52,6 @@ public class zohocrmcampaignlistpage extends Basepage implements Autoconstant
 	    element.click();
 	    break;
 		}
-		
-		
-		
-		
-		//WebElement campaignname=driver.findElement(By.xpath("(//a[contains(text(),'samsung mobile')])[3]"));
-		//campaignname.click();
 	
 	}
 }

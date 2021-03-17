@@ -26,11 +26,13 @@ public class Utility implements ITestListener
 	
 	public void onTestFailure(ITestResult result)
 	{
+		System.out.println("*****IN On Test FAILURE*******");
 		// TODO Auto-generated method stub
 		TakesScreenshot ts=(TakesScreenshot) Basetest.driver;
 		File srcfile=ts.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(srcfile, new File("./screenshot"+getClass().getName()+".png"));
+			
+			FileUtils.copyFile(srcfile, new File("./screenshot/"+result.getName()+".png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -39,6 +41,15 @@ public class Utility implements ITestListener
 	}
 
 	public void onTestSkipped(ITestResult result) {
+		
+		TakesScreenshot ts=(TakesScreenshot) Basetest.driver;
+		File srcfile1=ts.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(srcfile1, new File("./skipscreenshot/"+result.getName()+".png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// TODO Auto-generated method stub
 		
 	}
