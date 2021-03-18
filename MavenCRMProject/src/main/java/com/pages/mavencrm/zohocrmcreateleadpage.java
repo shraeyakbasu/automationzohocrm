@@ -143,7 +143,7 @@ public class zohocrmcreateleadpage extends Basepage implements Autoconstant
 		selectbyvalue(industrydropdown, "Large Enterprise");
 		selectbyvalue(leadstatusdropdown, "Contacted");
 		selectbyvalue(ratingdropdown, "Active");
-		campaignsourcelookupclick();
+		//campaignsourcelookupclick();
 		savebutton.click();
 		
 		

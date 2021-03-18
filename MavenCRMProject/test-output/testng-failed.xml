@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.scripts.mavencrm.createaccount">
+      <class name="com.scripts.mavencrm.printlead">
         <methods>
           <include name="logout"/>
-          <include name="accountcreate"/>
+          <include name="leadprint"/>
           <include name="closebrowser"/>
           <include name="openbrowser"/>
           <include name="login"/>
         </methods>
-      </class> <!-- com.scripts.mavencrm.createaccount -->
+      </class> <!-- com.scripts.mavencrm.printlead -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

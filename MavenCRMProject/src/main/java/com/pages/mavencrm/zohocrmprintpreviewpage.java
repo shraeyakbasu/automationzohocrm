@@ -34,10 +34,14 @@ public class zohocrmprintpreviewpage extends Basepage implements Autoconstant
 		driver.switchTo().window(al.get(1));
 		String actualtitle=gettitle(driver);
 		Reporter.log(actualtitle,true);
-		WebElement leadname=driver.findElement(By.xpath("//td[contains(text(),'shraeyak')]"));
-		String name=leadname.getText();
-		if(name.equalsIgnoreCase("shraeyak"))
+		WebElement companyname=driver.findElement(By.xpath("//td[contains(text(),'abc')]"));
+		WebElement designationname=driver.findElement(By.xpath("//td[contains(text(),'qa engineer')]"));
+		String compname=companyname.getText();
+		String designame=designationname.getText();
+		if(compname.equalsIgnoreCase("abc") && designame.contains("qa engineer"))
+		{
 			Reporter.log("found",true);
+		}
 		driver.switchTo().window(al.get(0));
 		
 	}

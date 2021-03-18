@@ -2,68 +2,74 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Zoho CRM - Displaying Custom View Details]]>
+      <![CDATA[title matched]]>
     </line>
     <line>
-      <![CDATA[Zoho CRM - Create Account]]>
+      <![CDATA[title matched]]>
     </line>
     <line>
-      <![CDATA[Zoho CRM - Displaying Custom View Details]]>
+      <![CDATA[title matched]]>
     </line>
     <line>
-      <![CDATA[Zoho CRM - Create Contact]]>
+      <![CDATA[Zoho CRM - Lead Details]]>
     </line>
     <line>
-      <![CDATA[Zoho CRM - Account Name Lookup]]>
+      <![CDATA[title matched]]>
     </line>
     <line>
-      <![CDATA[account found]]>
+      <![CDATA[Zoho CRM - Lead Details]]>
+    </line>
+    <line>
+      <![CDATA[found]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-03-17T17:08:09Z" name="Default suite" finished-at="2021-03-17T17:08:40Z" duration-ms="30565">
+  <suite started-at="2021-03-18T17:00:05Z" name="Default suite" finished-at="2021-03-18T17:00:26Z" duration-ms="20530">
     <groups>
     </groups>
-    <test started-at="2021-03-17T17:08:09Z" name="Default test" finished-at="2021-03-17T17:08:40Z" duration-ms="30565">
-      <class name="com.scripts.mavencrm.accountcontactintegration">
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.scripts.mavencrm.accountcontactintegration@418e7838]" started-at="2021-03-17T17:08:09Z" name="openbrowser" finished-at="2021-03-17T17:08:18Z" duration-ms="8277" status="PASS">
+    <test started-at="2021-03-18T17:00:05Z" name="Default test" finished-at="2021-03-18T17:00:26Z" duration-ms="20530">
+      <class name="com.scripts.mavencrm.printlead">
+        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.scripts.mavencrm.printlead@418e7838]" started-at="2021-03-18T17:00:05Z" name="openbrowser" finished-at="2021-03-18T17:00:12Z" duration-ms="6737" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openbrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.scripts.mavencrm.accountcontactintegration@418e7838]" started-at="2021-03-17T17:08:18Z" name="login" finished-at="2021-03-17T17:08:22Z" duration-ms="4016" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.scripts.mavencrm.printlead@418e7838]" started-at="2021-03-18T17:00:12Z" name="login" finished-at="2021-03-18T17:00:16Z" duration-ms="4141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="integrationaccountcontact()[pri:0, instance:com.scripts.mavencrm.accountcontactintegration@418e7838]" started-at="2021-03-17T17:08:22Z" name="integrationaccountcontact" description="integration between create account page and contact-account lookup page" finished-at="2021-03-17T17:08:38Z" duration-ms="16477" status="PASS">
+        <test-method signature="leadprint()[pri:0, instance:com.scripts.mavencrm.printlead@418e7838]" started-at="2021-03-18T17:00:16Z" name="leadprint" description="integration between create lead page and print lead page" finished-at="2021-03-18T17:00:24Z" duration-ms="7742" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Zoho CRM - Displaying Custom View Details]]>
+              <![CDATA[title matched]]>
             </line>
             <line>
-              <![CDATA[Zoho CRM - Create Account]]>
+              <![CDATA[title matched]]>
             </line>
             <line>
-              <![CDATA[Zoho CRM - Displaying Custom View Details]]>
+              <![CDATA[title matched]]>
             </line>
             <line>
-              <![CDATA[Zoho CRM - Create Contact]]>
+              <![CDATA[Zoho CRM - Lead Details]]>
             </line>
             <line>
-              <![CDATA[Zoho CRM - Account Name Lookup]]>
+              <![CDATA[title matched]]>
             </line>
             <line>
-              <![CDATA[account found]]>
+              <![CDATA[Zoho CRM - Lead Details]]>
+            </line>
+            <line>
+              <![CDATA[found]]>
             </line>
           </reporter-output>
-        </test-method> <!-- integrationaccountcontact -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.scripts.mavencrm.accountcontactintegration@418e7838]" started-at="2021-03-17T17:08:38Z" name="logout" finished-at="2021-03-17T17:08:39Z" duration-ms="470" status="PASS">
+        </test-method> <!-- leadprint -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.scripts.mavencrm.printlead@418e7838]" started-at="2021-03-18T17:00:24Z" name="logout" finished-at="2021-03-18T17:00:24Z" duration-ms="298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.scripts.mavencrm.accountcontactintegration@418e7838]" started-at="2021-03-17T17:08:39Z" name="closebrowser" finished-at="2021-03-17T17:08:40Z" duration-ms="1265" status="PASS">
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.scripts.mavencrm.printlead@418e7838]" started-at="2021-03-18T17:00:24Z" name="closebrowser" finished-at="2021-03-18T17:00:26Z" duration-ms="1566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-      </class> <!-- com.scripts.mavencrm.accountcontactintegration -->
+      </class> <!-- com.scripts.mavencrm.printlead -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
